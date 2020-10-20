@@ -22,10 +22,4 @@ for filename in filenames:
 # Concatenate all data into one DataFrame
 big_frame = pd.concat(dfs, ignore_index=True)
 
-big_frame.to_sql(name='BASEPRODUCAO', con=sqleng, schema='LEANDRO', if_exists='replace' , index=False)
-
-
-
-
-
-
+big_frame.to_sql(name='BASEPRODUCAO', con=sqleng, schema='LEANDRO', if_exists='append' , index=False)
